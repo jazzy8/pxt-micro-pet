@@ -1,4 +1,11 @@
-input.onLogoEvent(TouchButtonEvent.Touched, function () {
+input.onLogoEvent(TouchButtonEvent.LongPressed, function () {
+    strip.showColor(neopixel.colors(NeoPixelColors.Yellow))
+    strip.show()
+    soundExpression.slide.playUntilDone()
+    strip.clear()
+    strip.show()
+})
+input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     strip.showColor(neopixel.colors(NeoPixelColors.Yellow))
     strip.show()
     soundExpression.giggle.playUntilDone()
